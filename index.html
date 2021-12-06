@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(de)codifique sua mensagem</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="campos">
+        <p id="titulo">(de)codifique sua mensagem</p>
+        <label>Digite seu texto no campo abaixo</label> <br>
+        <input type="text" id="texto">
+        <br><br>
+
+        <p id="selecione">Selecione uma criptografia</p>
+        <label>Cifra de César</label>
+        <input type="radio" id="cifra" name="tipos">
+        <label>Base 64</label>        
+        <input type="radio" id="base" name="tipos">
+    
+        <div id="senhaCesar">
+            <label>Insira a senha </label>
+            <input type="number" id="numCesar">
+    
+        </div>
+    
+        <br><br>
+        <label>Codificar</label>
+        <input type="radio" name="cod" id="codificar">
+        <label>Decodificar</label>
+        <input type="radio" name="cod" id="decodificar"><br>
+
+        <button id="textoCod">codificar mensagem</button>
+        <button id="textoDecod">decodificar mensagem</button>
+
+        <p id="resultado"></p>
+
+    </div><br>
+    <footer>Criado por Carolly Barbosa ----------------- Resilia Educação [Web Dev FullStack]</footer>
+
+
+    <script src="./index.js"></script>
+
+</body>
+</html>

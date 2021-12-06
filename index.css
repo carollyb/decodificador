@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto+Mono:wght@600&family=Syne:wght@700&display=swap');
+
+
+body {
+    font-family: 'Syne', sans-serif;
+    background-image: url(./background.jpg);
+    background-size: 50%;
+    background-position-x: auto;
+    margin: 100px;
+    height: 700px;
+}
+
+#titulo {
+    font-size: 30px;
+    color: rgb(33, 71, 33);
+}
+
+#texto {
+    font-family: 'Syne', sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#selecione {
+    font-size: 20px;
+    color: rgb(33, 71, 33);
+}
+
+#numCesar{
+    font-family: 'Syne', sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#campos {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(68, 66, 66, 0.294);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#senhaCesar {
+    display: none;
+    text-align: center;
+}
+
+
+#textoCod {
+    display: none;
+    text-align: center;
+}
+
+#textoDecod {
+    display: none;
+    text-align: center;
+}
+
+#textoCod {
+    font-family: 'Syne', sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#textoDecod {
+    font-family: 'Syne', sans-serif;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+footer {
+   color: rgb(33, 71, 33);
+}
