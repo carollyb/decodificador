@@ -53,13 +53,17 @@ function resultadoCodCesar(){
     for (var i=0;i<textoUsuarioU.length;i++) {
         var letraAtual = textoUsuarioU.charCodeAt(i);
         if (letraAtual > 64 && letraAtual < 91) {
-            texto4 += String.fromCharCode(parseInt(letraAtual) + parseInt(incremento));
-        } else if (letraAtual == 32){
-            texto4 += letraAtual
+            if (parseInt(letraAtual) + parseInt(incremento)>90){
+                texto4 += String.fromCharCode(parseInt(letraAtual) + parseInt(incremento)-26);
+            } else {
+                texto4 += String.fromCharCode(parseInt(letraAtual) + parseInt(incremento));
+            }
+        } else if (letraAtual == 32) {
+                texto4 += ' '
         }
     }
     resultado.innerText = texto4;
-};
+}
 
 function resultadoDecodCesar(){
     var textoUsuarioU = textoUsuario.value;
