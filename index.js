@@ -47,28 +47,15 @@ function resultadoDecodBase() {
 
 function resultadoCodCesar(){
     var textoUsuarioU = textoUsuario.value;
-    textoUsuarioU = textoUsuarioU.toLowerCase();
-    var alfabeto = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    textoUsuarioU = textoUsuarioU.toUpperCase();
     incremento = incremento.value;
     var texto4 = '';
     for (var i=0;i<textoUsuarioU.length;i++) {
-        var letraAtual = textoUsuarioU[i];
-        if (letraAtual === ' ') {
-            texto4 += letraAtual;
-            continue;
-        }
-        var indiceAtual = alfabeto.indexOf(letraAtual);
-        var novoIndice = indiceAtual + incremento;
-        if (novoIndice > 25) {
-            novoIndice = novoIndice + 26;
-            texto4 += alfabeto[novoIndice]
-        } else if (novoIndice < 0) {
-            novoIndice = novoIndice - 26;
-            texto4 += alfabeto[novoIndice];
-        } else if (textoUsuarioU[i] === textoUsuarioU[i].toUpperCase()) {
-            texto4 += alfabeto[novoIndice].toUpperCase();
-        } else {
-            texto4 += alfabeto[novoIndice]
+        var letraAtual = textoUsuarioU.charCodeAt(i);
+        if (letraAtual > 64 && letraAtual < 91) {
+            texto4 += String.fromCharCode(parseInt(letraAtual) + parseInt(incremento));
+        } else if (letraAtual == 32){
+            texto4 += letraAtual
         }
     }
     resultado.innerText = texto4;
