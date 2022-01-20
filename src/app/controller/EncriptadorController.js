@@ -7,7 +7,8 @@ class EncriptadorController{
         this.resultado = $('#resultado');
         this.textoUsuario = $('#texto');
         this.senhaCesar = $('#senhaCesar');
-        this.botaoCod = $('#textoCod')
+        this.botaoCod = $('#textoCod');
+        this.botaoDecod = $('#textoDecod');
 
         this.encriptView = new EncriptView(this.resultado)
     }
@@ -21,7 +22,13 @@ class EncriptadorController{
     }
 
     showCodButton(){
+        this.botaoDecod.hide();
         this.botaoCod.show();
+    }
+
+    showDecodButton(){
+        this.botaoCod.hide();
+        this.botaoDecod.show();
     }
 
     Encryptor(){

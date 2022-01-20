@@ -4,7 +4,7 @@ class EncriptView{
     }
 
     update(model){
-        this.elemento.html(`<p>${model}</p>`)
+        this.elemento.append(`<p>${model}</p>`)
     }
     
     //resultado.innerText = texto2;

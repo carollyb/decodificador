@@ -29,7 +29,7 @@
       <label>Codificar</label>
       <input type="radio" name="cod" id="codificar" onclick="encriptadorController.showCodButton()"/>
       <label>Decodificar</label>
-      <input type="radio" name="cod" id="decodificar" /><br />
+      <input type="radio" name="cod" id="decodificar" onclick="encriptadorController.showDecodButton()"/><br />
 
       <button id="textoCod" onclick="encriptadorController.Encryptor()">
         codificar mensagem
@@ -38,7 +38,7 @@
         decodificar mensagem
       </button>
 
-      <p id="resultado"></p>
+      <div id="resultado"></div>
     </div>
     <br />
     <footer>
