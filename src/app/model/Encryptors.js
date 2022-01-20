@@ -2,14 +2,14 @@ class Encryptors{
 
     constructor(mensagem){
         this.mensagem = mensagem;
-        this.incremento = document.querySelector('#numCesar');
+        this.incremento = $('#numCesar');
     }
 
     CodCesar(){
         //transforma o value do input passado como parâmetro no constructor para uppercase
-        let textoUsuarioU = this.mensagem.toUpperCase();
+        var textoUsuarioU = this.mensagem.toUpperCase();
 
-        let incremento = this.incremento.value;
+        var incremento = this.incremento.value;
 
         var texto4 = '';
         for (var i=0;i<textoUsuarioU.length;i++) {
