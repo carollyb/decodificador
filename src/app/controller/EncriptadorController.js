@@ -34,8 +34,8 @@ class EncriptadorController{
     Encryptor(){
         //event.preventDefault();
 
-        let cod = new Encryptors(this.textoUsuario.value)
-        let resultCodCesar = cod.CodCesar();
+        let resultCodCesar = new Encryptors(this.textoUsuario.val())
+        
         this.encriptView.update(resultCodCesar)
         
             

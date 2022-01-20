@@ -4,11 +4,7 @@ class EncriptView{
     }
 
     update(model){
-        this.elemento.append(`<p>${model}</p>`)
+        this.elemento.html(`<p>${model.codCesar()}</p>`)
     }
     
-    //resultado.innerText = texto2;
-
-
-   // resultado.innerText = texto3
 }
