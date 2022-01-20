@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Syne', sans-serif;
-    background-image: url(./background.jpg);
+    background-image: url(../images/background.jpg);
     background-size: 50%;
     background-position-x: auto;
     margin: 100px;

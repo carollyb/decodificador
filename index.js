@@ -1,34 +1,9 @@
 
 //eventos
-cesar.addEventListener("click", function(){
-    if (cesar.checked) {
-        senhaCesar.style.display = "flex"
-        base.style.display = "none"
-    }
-});
-
-base.addEventListener("click", function(){
-    if (base.checked) {
-        senhaCesar.style.display = "none"
-    }
-})
-
-codificar.addEventListener("click", function(){
-    if (codificar.checked) {
-        textoCod.style.display = "flex"
-        textoDecod.style.display = "none"
-    } 
-})
-
-decodificar.addEventListener("click", function(){
-    if (decodificar.checked) {
-        textoDecod.style.display = "flex"
-        textoCod.style.display = "none"
-    }
-})
 
 
-
+//isso vai ser passado na view
+resultado.innerText = 
 
 
 //eventos para exibir o texto codificado ou decodificado

@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>(de)codifique sua mensagem</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./src/assets/style/index.css" />
+  </head>
+  <body>
     <div id="campos">
-        <p id="titulo">(de)codifique sua mensagem</p>
-        <label>Digite seu texto no campo abaixo</label> <br>
-        <input type="text" id="texto">
-        <br><br>
+      <p id="titulo">(de)codifique sua mensagem</p>
+      <label>Digite seu texto no campo abaixo</label> <br />
+      <input type="text" id="texto" />
+      <br /><br />
 
-        <p id="selecione">Selecione uma criptografia</p>
-        <label>Cifra de César</label>
-        <input type="radio" id="cifra" name="tipos">
-        <label>Base 64</label>        
-        <input type="radio" id="base" name="tipos">
-    
-        <div id="senhaCesar">
-            <label>Insira a senha </label>
-            <input type="number" id="numCesar">
-    
-        </div>
-    
-        <br><br>
-        <label>Codificar</label>
-        <input type="radio" name="cod" id="codificar">
-        <label>Decodificar</label>
-        <input type="radio" name="cod" id="decodificar"><br>
+      <p id="selecione">Selecione uma criptografia</p>
+      <label>Cifra de César</label>
+      <input type="radio" id="cifra" name="tipos" />
+      <label>Base 64</label>
+      <input type="radio" id="base" name="tipos" />
 
-        <button id="textoCod">codificar mensagem</button>
-        <button id="textoDecod">decodificar mensagem</button>
+      <div id="senhaCesar">
+        <label>Insira a senha </label>
+        <input type="number" id="numCesar" />
+      </div>
 
-        <p id="resultado"></p>
+      <br /><br />
+      <label>Codificar</label>
+      <input type="radio" name="cod" id="codificar" />
+      <label>Decodificar</label>
+      <input type="radio" name="cod" id="decodificar" /><br />
 
-    </div><br>
-    <footer>Criado por Carolly Barbosa ----------------- Resilia Educação [Web Dev FullStack]</footer>
+      <button id="textoCod" onclick="encriptadorController.Encryptor(event)">
+        codificar mensagem
+      </button>
+      <button id="textoDecod" onclick="encriptadorController.Decryptor(event)">
+        decodificar mensagem
+      </button>
 
-    <script src="./src/app/model/EncriptadorCesar.js"></script>
-    
+      <p id="resultado"></p>
+    </div>
+    <br />
+    <footer>
+      Criado por Carolly Barbosa ----------------- Resilia Educação [Web Dev
+      FullStack]
+    </footer>
 
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/app/model/Encryptors.js"></script>
+    <script src="./src/app/model/Decryptors.js"></script>
+    <script src="./src/app/controller/EncriptadorController.js"></script>
+    <script src="./src/app/view/EncriptView.js"></script>
+    <script>
+      let encriptadorController = new EncriptadorController();
+    </script>
+  </body>
 </html>
