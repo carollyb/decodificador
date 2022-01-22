@@ -26,6 +26,8 @@ class Encryptors{
                 }
             } else if (letraAtual == 32) {
                     texto4 += ' '
+            } else {
+                texto4 += String.fromCharCode(parseInt(letraAtual))
             }
         }
         return texto4;
@@ -34,7 +36,7 @@ class Encryptors{
     codBase() {
         
         return window.btoa(this.getMsg());
-        
+
     }
 
 }

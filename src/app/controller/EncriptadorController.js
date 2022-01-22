@@ -10,7 +10,8 @@ class EncriptadorController{
         this.botaoCod = $('#textoCod');
         this.botaoDecod = $('#textoDecod');
 
-        this.encriptView = new EncriptView(this.resultado)
+        this.encriptView = new EncryptView(this.resultado)
+        this.decryptView = new DecryptView(this.resultado)
     }
 
     show(){
@@ -34,29 +35,18 @@ class EncriptadorController{
     Encryptor(event){
         event.preventDefault();
 
-        let resultCod = new Encryptors(this.textoUsuario.val())
+        let resultCod = new Encryptors(this.textoUsuario.val());
         
         this.encriptView.update(resultCod)
-        
-            
-
-        /* else if (this.base.checked) {
-            let resultCodBase = cod.CodBase();
-            this.encriptView.update(resultCodBase)
-
-        }*/
-
 
     }
 
     Decryptor(event){
         event.preventDefault();
-        let cod2 = new Decryptors(this.textoUsuario.value)
-        if (this.cesar.checked){
-            return cod2.DecodCesar()
-        } else if (this.base.checked) {
-            return cod2.DecodBase()
-        }
+
+        let resultadoDecod = new Decryptors(this.textoUsuario.val());
+
+        this.decryptView.update(resultadoDecod)
     }
 
 }

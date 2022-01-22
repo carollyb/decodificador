@@ -2,29 +2,41 @@ class Decryptors{
 
     constructor(mensagem){
         this.mensagem = mensagem;
-        this.incremento = document.querySelector('#numCesar');
+        this.decremento = $('#numCesar');
+    }
+
+    getMsg() {
+        return this.mensagem
     }
     
-    DecodCesar(){
+    decodCesar(){
 
-        textoUsuarioU = textoUsuarioU.toUpperCase();
-        incremento = incremento.value;
-        var texto5 = '';
+        //transforma o value do input passado como parâmetro no constructor para uppercase
+        let msg = this.getMsg();
+        var textoUsuarioU = msg.toUpperCase();
+
+        var decremento = this.decremento.val();
+
+        var texto4 = '';
         for (var i=0;i<textoUsuarioU.length;i++) {
-            var asciiN = textoUsuarioU[i].charCodeAt();
-            if (asciiN >= 65 && asciiN <= 77) {
-                texto5 += String.fromCharCode(asciiN - parseInt(incremento));
-            } else if (asciiN >=78 && asciiN <= 90) {
-                texto5 += String.fromCharCode(asciiN + parseInt(incremento));
+            var letraAtual = textoUsuarioU.charCodeAt(i);
+            if (letraAtual > 64 && letraAtual < 91) {
+                if (parseInt(letraAtual) - parseInt(decremento)<65){
+                    texto4 += String.fromCharCode(parseInt(letraAtual) - parseInt(decremento)+26);
+                } else {
+                    texto4 += String.fromCharCode(parseInt(letraAtual) - parseInt(decremento));
+                }
+            } else if (letraAtual == 32) {
+                    texto4 += ' '
             } else {
-                texto5 += textoUsuarioU[i];
+                texto4 += String.fromCharCode(parseInt(letraAtual))
             }
         }
-        resultado.innerText = texto5;
+        return texto4;
     }
 
-    DecodBase() {
-        return window.atob(this.mensagem);
+    decodBase() {
+        return window.atob(this.getMsg());
     }
 
 }

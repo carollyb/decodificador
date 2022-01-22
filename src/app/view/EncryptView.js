@@ -1,4 +1,4 @@
-class EncriptView{
+class EncryptView{
     constructor(elemento){
         this.elemento = elemento;
         this.radioButtons = document.querySelectorAll('input[name="tipos"]')
