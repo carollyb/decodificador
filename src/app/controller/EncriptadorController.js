@@ -31,12 +31,12 @@ class EncriptadorController{
         this.botaoDecod.show();
     }
 
-    Encryptor(){
-        //event.preventDefault();
+    Encryptor(event){
+        event.preventDefault();
 
-        let resultCodCesar = new Encryptors(this.textoUsuario.val())
+        let resultCod = new Encryptors(this.textoUsuario.val())
         
-        this.encriptView.update(resultCodCesar)
+        this.encriptView.update(resultCod)
         
             
 

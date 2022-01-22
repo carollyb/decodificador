@@ -16,9 +16,9 @@
 
       <p id="selecione">Selecione uma criptografia</p>
       <label>Cifra de César</label>
-      <input type="radio" id="cifra" name="tipos" onclick="encriptadorController.show()"/>
+      <input type="radio" id="cifra" name="tipos" value ="cifra" onclick="encriptadorController.show()"/>
       <label>Base 64</label>
-      <input type="radio" id="base" name="tipos" onclick="encriptadorController.hide()"/>
+      <input type="radio" id="base" name="tipos" value="base" onclick="encriptadorController.hide()"/>
 
       <div id="senhaCesar">
         <label>Insira a senha </label>
@@ -31,7 +31,7 @@
       <label>Decodificar</label>
       <input type="radio" name="cod" id="decodificar" onclick="encriptadorController.showDecodButton()"/><br />
 
-      <button id="textoCod" onclick="encriptadorController.Encryptor()">
+      <button id="textoCod" onclick="encriptadorController.Encryptor(event)">
         codificar mensagem
       </button>
       <button id="textoDecod" onclick="encriptadorController.Decryptor(event)">

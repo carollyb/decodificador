@@ -31,8 +31,10 @@ class Encryptors{
         return texto4;
     }
     
-    CodBase() {
-        return window.btoa(this.mensagem)
+    codBase() {
+        
+        return window.btoa(this.getMsg());
+        
     }
 
 }
