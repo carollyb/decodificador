@@ -26,4 +26,4 @@
 - [x] Esvaziar campos de entrada do usuário após as consultas.
 
 ### Demonstração
-![Image](./demo.JPG)
+![Image](./src/assets/images/demo.JPG)
